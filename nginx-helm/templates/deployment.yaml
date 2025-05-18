@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
-  namespace:  {{ .values.namespace.name }}
+  namespace:  {{ .Values.namespace.name }}
   labels:
     app: nginx
     company: devseccops
@@ -18,7 +18,7 @@ spec:
         app.kubernetes.io/name: external-app
         app.kubernetes.io/instance: nginx
     spec:
-      serviceAccountName: {{ .values.serviceAccount.name }}
+      serviceAccountName: {{ .Values.serviceAccount.name }}
       securityContext: {}
       containers:
         - name: nginx

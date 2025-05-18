@@ -1,1 +1,5 @@
-replicaCount: 5
+namespace:
+  name: amit1-stage-nginx-namespace
+
+serviceAccount:
+  name: nginx-service-account
